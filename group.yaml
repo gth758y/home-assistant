@@ -1,0 +1,49 @@
+# groups
+  alarm:
+    name: alarm
+    entities:
+      - alarm_control_panel.home_alarm
+      - binary_sensor.back_door
+      - binary_sensor.front_doors
+      - binary_sensor.glass_break__breakfast
+      - binary_sensor.glass_break__guest_rooms
+      - binary_sensor.master_bedroom_windows
+      - binary_sensor.second_floor
+      - binary_sensor.second_floor_smoke
+      - binary_sensor.main_floor_smoke
+      - sensor.home_alarm_keypad      
+  network:
+    name: networking
+    entities:
+      - sensor.speedtest_download
+      - sensor.speedtest_ping
+      - sensor.speedtest_upload  
+  weather:
+    name: weather
+    entities:
+      - sun.sun
+      - sensor.dark_sky_apparent_temperature
+      - sensor.dark_sky_cloud_coverage
+      - sensor.dark_sky_dew_point
+      - sensor.dark_sky_humidity
+      - sensor.dark_sky_icon
+      - sensor.dark_sky_precip
+      - sensor.dark_sky_precip_intensity
+      - sensor.dark_sky_precip_probability
+      - sensor.dark_sky_summary
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_visibility
+      - sensor.dark_sky_wind_bearing
+      - sensor.dark_sky_wind_speed
+      - sensor.dark_sky_daily_high_apparent_temperature
+      - sensor.dark_sky_daily_high_temperature
+      - sensor.dark_sky_daily_low_apparent_temperature
+      - sensor.dark_sky_daily_low_temperature
+      - sensor.dark_sky_daily_max_precip_intensity
+      - sensor.dark_sky_daily_summary
+      - sensor.dark_sky_hourly_summary
+      - sensor.dark_sky_minutely_summary
+      - sensor.dark_sky_nearest_storm_bearing
+      - sensor.dark_sky_nearest_storm_distance
+      - sensor.dark_sky_ozone
+      - sensor.dark_sky_pressure

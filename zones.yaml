@@ -1,0 +1,43 @@
+# Zones #
+
+- name: home
+  latitude: 29.4662834
+  longitude: -98.7307748
+  radius: 60
+  icon: mdi:home
+  
+- name: Boeing
+  latitude: 29.3731224
+  longitude: -98.5685542
+  radius: 800
+  icon: mdi:briefcase
+  
+- name: SwRI
+  latitude: 29.4437382
+  longitude: -98.6111547
+  radius: 800
+  icon: mdi:briefcase
+  
+- name: KSAT
+  latitude: 29.526853
+  longitude: -98.473009
+  radius: 500
+  icon: mdi:airplane
+  
+- name: KATL
+  latitude: 33.640866
+  longitude: -84.432972
+  radius: 1250
+  icon: mdi:airplane
+  
+- name: MoAndJoe
+  latitude: 29.871795
+  longitude: -98.651235
+  radius: 125
+  icon: mdi:castle
+  
+- name: CCAD
+  latitude: 27.696528
+  longitude: -97.275198
+  radius: 750
+  icon: mdi:worker

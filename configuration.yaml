@@ -1,0 +1,53 @@
+homeassistant:
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
+  unit_system: imperial
+  time_zone: !secret home_time_zone
+  customize: !include custom.yaml
+
+frontend:
+updater:
+conversation:
+discovery:
+logbook:
+history:
+sun:
+sensor: !include sensors.yaml
+automation: !include_dir_list automation
+script: !include_dir_named scripts
+wemo:
+
+climate:
+  platform: honeywell
+  username: !secret honeywell_user
+  password: !secret honeywell_pass
+  region: us
+  
+### Mosquitto MQQT ###
+mqtt:
+    broker: 10.99.1.79
+    port: 1883
+    client_id: home-assistant-1
+    username: !secret mmqtt_user
+    password: !secret mmqtt_pass
+
+http:
+  api_password: !secret ha_api_pass
+  ssl_certificate: !secret ha_ssl_cert
+  ssl_key: !secret ha_ssl_key
+  
+zwave:
+  usb_path: /dev/ttyACM0
+  config_path: /usr/local/lib/python3.4/dist-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
+
+scene: !include scenes.yaml
+zone: !include zones.yaml
+device_tracker: !include device_trackers.yaml
+input_select: !include input_select.yaml
+#input_slider: !include input_slider.yaml
+media_player: !include media_player.yaml
+envisalink: !include envisalink.yaml
+group: !include group.yaml
+proximity: !include proximity.yaml

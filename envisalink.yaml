@@ -1,0 +1,51 @@
+#envisialink
+
+#optional
+  port: 4025
+  evl_version: 4
+  keepalive_interval: 60
+  zonedump_interval: 30
+
+#required
+  host: 10.99.1.81
+  panel_type: DSC
+  user_name: !secret alarm_user
+  password: !secret alarm_pass
+  code: !secret alarm_code
+
+  zones:
+    1:
+      name: 'Front Doors'
+      type: 'opening'
+
+    2:
+      name: 'Back Door'
+      type: 'opening'
+      
+    3:
+      name: 'Master Bedroom Windows'
+      type: 'opening'
+      
+    4:
+      name: 'Second Floor'
+      type: 'opening'
+      
+    5:
+      name: 'Glass Break - Breakfast'
+      type: 'opening'
+      
+    6:
+      name: 'Glass Break - Guest Rooms'
+      type: 'opening'
+      
+    7:
+      name: 'Second Floor Smoke'
+      type: 'opening'
+      
+    8:
+      name: 'Main Floor Smoke'
+      type: 'opening'
+
+  partitions:
+    1:
+      name: 'Home Alarm'

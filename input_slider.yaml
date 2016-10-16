@@ -1,0 +1,27 @@
+    bedroom_low:
+        name: Bedroom Low Setpoint
+        initial: 56
+        min: 50
+        max: 90
+        step: 1
+
+    bedroom_high:
+        name: Bedroom High Setpoint
+        initial: 83
+        min: 50
+        max: 90
+        step: 1
+        
+    living_rm_low:
+        name: Living Room Low Setpoint
+        initial: 56
+        min: 50
+        max: 90
+        step: 1
+        
+    living_rm_high:
+        name: Living Room High Setpoint
+        initial: 83
+        min: 50
+        max: 90
+        step: 1

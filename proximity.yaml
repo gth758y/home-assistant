@@ -1,0 +1,20 @@
+## proximity
+
+- zone: home
+  devices:
+    - device_tracker.tyler_tyler
+    - device_tracker.tyler_amyphone
+  tolerance: 20
+  unit_of_measure: km
+  
+- zone: swri
+  devices:
+    - device_tracker.tyler_amyphone
+  tolerance: 20
+  unit_of_measure: km
+    
+- zone: boeing
+  devices:
+    - device_tracker.tyler_tyler
+  tolerance: 20
+  unit_of_measure: km

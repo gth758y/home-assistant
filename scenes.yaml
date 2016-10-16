@@ -1,0 +1,119 @@
+# Scene definition
+
+- name: Master Bedroom On
+  entities:
+    light.bedroom__tyler:
+        state: on
+        xy_color: [0.4449, 0.4066]
+        brightness: 254
+    light.bedroom__amy:
+        state: on
+        xy_color: [0.4449, 0.4066]
+        brightness: 254
+        
+- name: Master Bedroom Off
+  entities:
+    light.bedroom__tyler:
+        state: off
+    light.bedroom__amy:
+        state: off
+        
+- name: Living Room Normal
+  entities:
+    light.living_room_short_lamp:
+        state: on
+        xy_color: [0.4486, 0.4077]
+        brightness: 254
+    light.living_room_tall_lamp:
+        state: on
+        xy_color: [0.4486, 0.4077]
+        brightness: 254
+        
+- name: Living Room Morning
+  entities:
+    light.living_room_short_lamp:
+        state: on
+        xy_color: [0.5186, 0.4142]
+        brightness: 177
+    light.living_room_tall_lamp:
+        state: on
+        xy_color: [0.5186, 0.4142]
+        brightness: 177
+        
+- name: Living Room Off
+  entities:
+    light.living_room_short_lamp:
+        state: off
+    light.living_room_tall_lamp:
+        state: off
+        
+- name: Master Bath Bright Red
+  entities:
+    light.master_bathroom:
+        state: on
+        xy_color: [0.5249,0.4134]
+        brightness: 85
+        
+- name: Master Bath Dim Red
+  entities:
+    light.master_bathroom:
+        state: on
+        xy_color: [0.6736,0.3221]
+        brightness: 34
+
+- name: Master Bath Off
+  entities:
+    light.master_bathroom:
+        state: off
+
+- name: Exterior Lights On
+  entities:
+    switch.front_door: on
+    switch.back_porch: on
+    
+- name: Exterior Lights Off
+  entities:
+    switch.front_door: off
+    switch.back_porch: off
+    
+- name: Kitchen Off
+  entities:
+    light.under_cabinet:
+        state: off
+    light.under_cabinet__fridge:
+        state: off
+    light.under_cabinet__passthrough:
+        state: off
+
+- name: Kitchen On
+  entities:
+    light.under_cabinet:
+        state: on
+        xy_color: [0.3637,0.3657]
+        brightness: 254
+    light.under_cabinet__fridge:
+        state: on
+        xy_color: [0.3637,0.3657]
+        brightness: 254
+    light.under_cabinet__passthrough:
+        state: on
+        xy_color: [0.3916,0.3834]
+        brightness: 254
+        
+- name: Guest Bedroom On
+  entities:
+    light.guest_bedroom__closet:
+        state: on
+        xy_color: [0.4449,0.4066]
+        brightness: 254
+    light.guest_bedroom__window:
+        state: on
+        xy_color: [0.4449,0.4066]
+        brightness: 254
+        
+- name: Guest Bedroom Off
+  entities:
+    light.guest_bedroom__closet:
+        state: off        
+    light.guest_bedroom__window:
+        state: off

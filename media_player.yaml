@@ -1,0 +1,4 @@
+
+- platform: samsungtv
+  host: 10.99.1.13
+  name: Living Room TV

@@ -1,0 +1,14 @@
+
+tyler_tyler:
+  name: tyler
+  mac: 4C:66:41:1D:9B:EB
+  picture: /local/tyler.jpg
+  track: yes
+  hide_if_away: no
+
+tyler_amyphone:
+  name: amy
+  mac: 4C:66:41:1C:1D:44
+  picture: /local/amy.jpeg
+  track: yes
+  hide_if_away: no
