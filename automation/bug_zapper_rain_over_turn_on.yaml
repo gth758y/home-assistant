@@ -1,0 +1,16 @@
+# Turn bug zapper off when it starts raining so GFI doesn't trip
+
+alias: Rain is Over - Turn Bug Zapper Off
+trigger: 
+    platform: state
+    entity_id: sensor.dark_sky_precip
+    state: '0'
+    for:
+        minutes: 15
+condition:
+    condition: state
+    entity_id: input_select.bug_zapper_state
+    state: 'bug_on'
+action:
+  - service: switch.turn_on
+    entity_id: switch.ge_unknown_type4f50_id3031_switch_2

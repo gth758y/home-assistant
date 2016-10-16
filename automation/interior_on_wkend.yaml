@@ -1,0 +1,16 @@
+alias: Interior Lights On
+trigger: 
+    platform: time
+    after: '17:20:00'
+condition:
+    condition: time
+    weekday:
+        - sat
+        - sun
+action:
+  - service: scene.turn_on
+    entity_id: scene.living_room_normal
+  - service: scene.turn_on
+    entity_id: scene.master_bedroom_on
+  - service: scene.turn_on
+    entity_id: scene.guest_bedroom_on

@@ -1,0 +1,20 @@
+# Amy Sleep Tyler Not Ready
+
+alias: amy ready for bed
+trigger:
+    platform: state
+    entity_id: input_select.amy_status
+    to: 'sleeping'
+condition:
+    - condition: state
+      entity_id: input_select.tyler_status
+      state: 'standby'
+    - condition: state
+      entity_id: device_tracker.tyler_tyler
+      state: 'home'
+    - condition: state
+      entity_id: device_tracker.tyler_amyphone
+      state: 'home'
+action:
+    service: homeassistant.turn_off
+    entity_id: light.bedroom__amy

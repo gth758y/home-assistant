@@ -1,0 +1,10 @@
+# Turn exterior lights on around sunset
+
+alias: Turn on lights when sun sets
+trigger: 
+    platform: sun
+    event: sunset
+    offset: "-00:20:00"
+action:
+    service: scene.turn_on
+    entity_id: scene.exterior_lights_on

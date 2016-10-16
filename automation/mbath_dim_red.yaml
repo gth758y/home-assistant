@@ -1,0 +1,7 @@
+alias: Master Bath Late Night Lights
+trigger: 
+    platform: time
+    after: '23:00:00'
+action:
+    service: scene.turn_on
+    entity_id: scene.master_bath_dim_red

@@ -1,0 +1,7 @@
+alias: Red Master Bath Light
+trigger: 
+    platform: sun
+    event: sunset
+action:
+    service: scene.turn_on
+    entity_id: scene.master_bath_bright_red

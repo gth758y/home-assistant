@@ -1,0 +1,12 @@
+# No one home and it's late -- lights off #
+
+alias: No one home lights off
+trigger:
+    platform: time
+    after: '22:45:00'
+condition:
+    condition: state
+    entity_id: group.all_devices
+    state: not_home
+action:
+    service: script.nighttime_shutdown

@@ -1,0 +1,16 @@
+# If it stops raining and the sun is still up, turn the lights off #
+
+alias: rain_stopped_sun_still_up
+trigger:
+    platform: state
+    entity_id: sensor.dark_sky_precip
+    state: '0'
+    for:
+        minutes: 10
+condition:
+    condition: sun
+    before: sunset
+    before_offset: "-1:00:00"
+action:
+    service: scene.turn_on
+    entity_id: scene.exterior_lights_off

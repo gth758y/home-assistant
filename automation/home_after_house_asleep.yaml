@@ -1,0 +1,22 @@
+# Late night out -- house is already asleep #
+
+alias: home late and house is dark
+trigger:
+    platform: numeric_state
+    entity_id: proximity.home
+    above: 0
+    below: 3
+condition:
+    condition: state
+    entity_id: input_select.house_status
+    state: 'asleep'
+action:
+  - service: scene.turn_on
+    entity_id: scene.living_room_morning
+  - service: scene.turn_on
+    entity_id: scene.exterior_lights_on
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.house_status
+      option: 'awake'
+    

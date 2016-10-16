@@ -1,0 +1,15 @@
+# If it starts raining, turn on exterior lights #
+
+alias: rain_started
+trigger:
+    platform: state
+    entity_id: sensor.dark_sky_precip
+    state: 'rain'
+    for:
+        minutes: 10
+condition:
+    condition: sun
+    after: sunrise    
+action:
+    service: scene.turn_on
+    entity_id: scene.exterior_lights_on

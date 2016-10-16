@@ -1,0 +1,18 @@
+# Tyler Sleep Amy Ready
+
+alias: tyler ready for bed amy is already ready
+trigger:
+    platform: state
+    entity_id: input_select.tyler_status
+    to: 'sleeping'    
+condition: 
+  condition: or
+  conditions:
+    - condition: state
+      entity_id: input_select.amy_status
+      state: 'sleeping'
+    - condition: state
+      entity_id: device_tracker.tyler_amyphone
+      state: not_home
+action:
+    service: script.nighttime_shutdown

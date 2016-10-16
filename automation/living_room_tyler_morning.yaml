@@ -1,0 +1,15 @@
+alias: Tyler Wakes Up
+trigger: 
+    platform: time
+    after: '04:20:00'
+condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+action:
+    service: scene.turn_on
+    entity_id: scene.living_room_morning

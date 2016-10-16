@@ -1,0 +1,21 @@
+alias: Tyler Goes to Work
+trigger: 
+    platform: time
+    after: '05:35:00'
+condition:
+    condition: or    
+    conditions:
+      - condition: and
+        conditions:
+          - condition: state
+            entity_id: 'device_tracker.tyler_amyphone'
+            state: 'home'
+          - condition: state
+            entity_id: 'input_select.amy_status'
+            state: 'sleeping'
+      - condition: state
+        entity_id: 'device_tracker.tyler_amyphone'
+        state: 'not_home'
+action:
+    service: scene.turn_on
+    entity_id: scene.living_room_off

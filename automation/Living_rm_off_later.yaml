@@ -1,0 +1,7 @@
+alias: Amy Goes to Work
+trigger: 
+    platform: time
+    after: '08:00:00'
+action:
+    service: scene.turn_on
+    entity_id: scene.living_room_off
