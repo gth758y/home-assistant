@@ -1,7 +1,7 @@
 alias: Interior Lights On
 trigger: 
     platform: time
-    after: '18:05:00'
+    after: '17:35:00'
 condition:
     condition: time
     weekday:
