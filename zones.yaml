@@ -1,43 +1,43 @@
 # Zones #
 
 - name: home
-  latitude: 29.4662834
-  longitude: -98.7307748
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
   radius: 60
   icon: mdi:home
   
 - name: Boeing
-  latitude: 29.3731224
-  longitude: -98.5685542
+  latitude: !secret boeing_lat
+  longitude: !secret boeing_long
   radius: 800
   icon: mdi:briefcase
   
 - name: SwRI
-  latitude: 29.4437382
-  longitude: -98.6111547
+  latitude: !secret swri_lat
+  longitude: !secret swri_long
   radius: 800
   icon: mdi:briefcase
   
 - name: KSAT
-  latitude: 29.526853
-  longitude: -98.473009
+  latitude: !secret ksat_lat
+  longitude: !secret ksat_long
   radius: 500
   icon: mdi:airplane
   
 - name: KATL
-  latitude: 33.640866
-  longitude: -84.432972
+  latitude: !secret katl_lat
+  longitude: !secret katl_long
   radius: 1250
   icon: mdi:airplane
   
 - name: MoAndJoe
-  latitude: 29.871795
-  longitude: -98.651235
+  latitude: !secret moandjoe_lat
+  longitude: !secret moandjoe_long
   radius: 125
   icon: mdi:castle
   
 - name: CCAD
-  latitude: 27.696528
-  longitude: -97.275198
-  radius: 750
+  latitude: !secret ccad_lat
+  longitude: !secret ccad_long
+  radius: 750 
   icon: mdi:worker
