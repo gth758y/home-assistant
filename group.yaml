@@ -1,4 +1,133 @@
-# groups
+## Views
+  default_view:
+    view: yes
+    entities:
+      - device_tracker.tyler_amyphone
+      - device_tracker.tyler_tyler
+      - group.light_list
+      - group.sensor_node_1_card
+      - climate.bedroom
+      - climate.living_room 
+      - updater.updater
+      
+  lights_v:
+    view: yes
+    name: lights
+    entities:
+      - group.exterior_lights
+      - group.living_room_lights
+      - group.bedroom_lights
+      - group.kitchen_lights
+      - group.guest_room_lights
+      - group.office_lights
+      
+  audio_v:
+    view: yes
+    name: audio
+    entities:
+      - media_player.master_bedroom
+      - media_player.master_bathroom
+      - media_player.porch
+      - media_player.dining_room
+      - media_player.office
+      - media_player.garage
+
+  3d_print_v:
+    view: yes
+    name: 3D Printer
+    entities:
+      - group.3d_print_list
+      
+  scenes_v:
+    view: yes
+    name: Scenes
+    entities:
+      - scene.exterior_lights_off
+      - scene.exterior_lights_on
+      - scene.guest_bedroom_off
+      - scene.guest_bedroom_on
+      - scene.kitchen_off
+      - scene.kitchen_on
+      - scene.living_room_morning
+      - scene.living_room_normal
+      - scene.living_room_off
+      - scene.master_bath_bright_red
+      - scene.master_bath_dim_red
+      - scene.master_bath_off
+      - scene.master_bedroom_off
+      - scene.master_bedroom_on
+      - scene.flash_living_rm
+  weather_v:
+    view: yes
+    name: Weather
+    entities:
+      - group.current_conditions
+      - group.forecast
+      - group.almanac
+    
+  automation_v:
+    view: yes
+    name: Automation
+    entities:
+      - group.automation_list
+      - group.script_list
+      
+  alarm_hvac_v:
+    view: yes
+    name: Alarm and HVAC
+    entities:
+      - group.alarm
+      - climate.bedroom
+      - climate.living_room 
+      - group.media_players
+      
+  admin_v:
+    view: yes
+    name: Admin
+    entities:
+      - group.myvariables
+      - proximity.boeing
+      - proximity.home
+      - proximity.swri
+      - group.test
+      
+
+      
+## Groups
+  exterior_lights:
+    name: Exterior
+    entities:
+      - switch.back_porch
+      - switch.ge_12722_onoff_relay_switch_switch_4_0
+      - switch.ge_unknown_type4f50_id3031_switch_2_0
+  living_room_lights:    
+    name: Living Room
+    entities:
+      - light.living_room_short_lamp
+      - light.living_room_tall_lamp
+      - sensor.sn1_ldr
+  bedroom_lights:
+    name: Master Bedroom
+    entities:
+      - light.bedroom__amy
+      - light.bedroom__tyler
+      - light.master_bathroom    
+  kitchen_lights:    
+    name: Kitchen
+    entities:
+      - switch.ge_12722_onoff_relay_switch_switch_3_0
+      - light.under_cabinet
+      - light.under_cabinet__fridge
+      - light.under_cabinet__passthrough
+  guest_room_lights:
+    name: Guest Room
+    entities:
+      - light.guest_bedroom__closet
+      - light.guest_bedroom__window
+  office_lights:
+    name: Office
+    entities:
+      - light.office
   alarm:
     name: alarm
     entities:
@@ -11,7 +140,8 @@
       - binary_sensor.second_floor
       - binary_sensor.second_floor_smoke
       - binary_sensor.main_floor_smoke
-      - sensor.home_alarm_keypad      
+      - sensor.home_alarm_keypad
+
   network:
     name: networking
     entities:
@@ -47,3 +177,132 @@
       - sensor.dark_sky_nearest_storm_distance
       - sensor.dark_sky_ozone
       - sensor.dark_sky_pressure
+  current_conditions:
+    name: Current Conditions
+    entities:
+      - sensor.dark_sky_apparent_temperature
+      - sensor.dark_sky_cloud_coverage
+      - sensor.dark_sky_dew_point
+      - sensor.dark_sky_humidity
+      - sensor.dark_sky_precip
+      - sensor.dark_sky_precip_intensity
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_visibility
+      - sensor.dark_sky_wind_bearing
+      - sensor.dark_sky_wind_speed
+      - sensor.dark_sky_ozone
+      - sensor.dark_sky_pressure
+      
+  almanac:
+    name: Almanac Data
+    entities:
+      - sensor.dark_sky_daily_high_apparent_temperature
+      - sensor.dark_sky_daily_high_temperature
+      - sensor.dark_sky_daily_low_apparent_temperature
+      - sensor.dark_sky_daily_low_temperature
+      - sensor.dark_sky_daily_max_precip_intensity
+      
+  forecast:
+    name: Forecast
+    entities:
+      - sensor.dark_sky_precip_probability
+      - sensor.dark_sky_daily_summary
+      - sensor.dark_sky_hourly_summary
+      - sensor.dark_sky_minutely_summary
+      - sensor.dark_sky_nearest_storm_bearing
+      - sensor.dark_sky_nearest_storm_distance
+      
+  myvariables:
+    name: Variables
+    entities:
+      - input_select.amy_status
+      - input_select.tyler_status
+      - input_select.bug_zapper_state
+      - input_select.house_status
+      - input_select.visitars
+      - input_select.darkness_state
+      
+  automation_list:
+    name: Automations
+    entities:
+      - automation.rain_stopped_sun_still_up
+      - automation.home_late_and_house_is_dark
+      - automation.no_one_home_lights_off
+      - automation.tyler_alarming
+      - automation.rain_started
+      - automation.turn_bug_zapper_on
+      - automation.rain_is_over__turn_bug_zapper_off
+      - automation.master_bath_late_night_lights
+      - automation.amy_alarming
+      - automation.tyler_departed
+      - automation.turn_bug_zapper_off
+      - automation.its_daytime_and_it_was_dark_but_now_its_not__lights_off
+      - automation.amy_ready_for_bed_tyler_is_already_ready
+      - automation.its_raining__turn_bug_zapper_off
+      - automation.its_daytime_but_its_dark__exterior_lights_on
+      - automation.quit_leaving_the_bathroom_light_on
+      - automation.its_daytime_but_its_dark__interior_lights_on
+      - automation.tyler_ready_for_bed_amy_is_already_ready
+      - automation.turn_off_the_living_room
+      - automation.amy_departed
+      - automation.red_master_bath_light
+      - automation.interior_lights_on
+      - automation.tyler_ready_for_bed
+      - automation.owntracks_refresh
+      - automation.amy_ready_for_bed
+      - automation.turn_on_lights_when_sun_sets
+      - automation.master_bathroom_lights_off
+      - automation.3d_printer_is_done
+
+      
+  script_list:
+    name: Scripts
+    entities:
+      - script.nighttime_shutdown
+      - script.refresh_devices
+      - script.underwater_lights
+      - script.underwater_lights_looper
+      - script.flash_living_rm
+      
+  light_list:
+    name: Lights
+    entities:
+      - switch.back_porch
+      - switch.ge_12722_onoff_relay_switch_switch_4_0
+      - switch.ge_unknown_type4f50_id3031_switch_2_0
+      - light.living_room_short_lamp
+      - light.living_room_tall_lamp
+      - light.bedroom__amy
+      - light.bedroom__tyler
+      - light.master_bathroom
+      - switch.ge_12722_onoff_relay_switch_switch_3_0
+      - light.under_cabinet
+      - light.under_cabinet__fridge
+      - light.under_cabinet__passthrough
+      - light.guest_bedroom__closet
+      - light.guest_bedroom__window
+      - light.office
+      - sensor.living_room_light_level
+      
+  media_players:
+    name: Media Players
+    entities:
+      - media_player.denon_avrx2000
+      - media_player.galaxy_s7
+      - media_player.galaxy_s7_2
+      - media_player.living_room_tv
+      
+  3d_print_list:
+    name: Octoprint
+    entities:
+      - sensor.octoprint_current_state
+      - sensor.octoprint_job_percentage
+      - sensor.octoprint_target_bed_temp
+      - sensor.octoprint_actual_bed_temp
+      - sensor.octoprint_target_tool0_temp
+      - sensor.octoprint_actual_tool0_temp
+      
+  sensor_node_1_card:  
+    name: Living Rm MultiSensor
+    entities:
+      - sensor.living_room_light_level

@@ -3,7 +3,7 @@
 - name: home
   latitude: !secret home_latitude
   longitude: !secret home_longitude
-  radius: 60
+  radius: 100
   icon: mdi:home
   
 - name: Boeing

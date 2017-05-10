@@ -1,0 +1,13 @@
+# Binary sensors
+
+  - platform: threshold
+    name: "Darkness Threshold for Lights On"
+    threshold: 350
+    type: lower
+    entity_id: sensor.living_room_light_level
+    
+  - platform: threshold
+    name: "Darkness Threshold for Lights Off"
+    threshold: 400
+    type: upper
+    entity_id: sensor.living_room_light_level

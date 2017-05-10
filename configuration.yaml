@@ -42,6 +42,14 @@ zwave:
   usb_path: /dev/ttyACM0
   config_path: /usr/local/lib/python3.4/dist-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
 
+recorder:
+  purge_days: 30
+  db_url: !secret mariaDB_url
+  
+octoprint:
+  host: 10.99.1.102
+  api_key: !secret octo_api_key
+  
 scene: !include scenes.yaml
 zone: !include zones.yaml
 device_tracker: !include device_trackers.yaml
@@ -51,3 +59,4 @@ media_player: !include media_player.yaml
 envisalink: !include envisalink.yaml
 group: !include group.yaml
 proximity: !include proximity.yaml
+binary_sensor: !include binary_sensor.yaml

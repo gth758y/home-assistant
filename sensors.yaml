@@ -34,3 +34,18 @@
     - ping
     - download
     - upload
+
+### OctoPrint
+ - platform: octoprint
+   name: OctoPrint
+   monitored_conditions:
+    - Current State
+    - Temperatures
+    - Job Percentage
+    
+ - platform: mqtt  
+   state_topic: "bruh/sensornode1"  
+   name: "Living Room Light Level"
+   ##This sensor is not calibrated to actual LUX. Rather, this a map of the input voltage ranging from 0 - 1023.
+   unit_of_measurement: "LUX"  
+   value_template: '{{ value_json.ldr }}' 

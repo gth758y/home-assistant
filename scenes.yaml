@@ -68,12 +68,12 @@
 
 - name: Exterior Lights On
   entities:
-    switch.front_door: on
+    switch.ge_12722_onoff_relay_switch_switch_4_0: on
     switch.back_porch: on
     
 - name: Exterior Lights Off
   entities:
-    switch.front_door: off
+    switch.ge_12722_onoff_relay_switch_switch_4_0: off
     switch.back_porch: off
     
 - name: Kitchen Off
@@ -117,3 +117,123 @@
         state: off        
     light.guest_bedroom__window:
         state: off
+        
+- name: Kitchen Underwater 1
+  entities:
+    light.under_cabinet__passthrough:
+        state: on
+        xy_color: [0.1909,0.0874]
+        brightness: 96
+        transition: 2
+    light.under_cabinet__fridge:
+        state: on
+        xy_color: [0.1637,0.1933]
+        brightness: 105
+        transition: 2
+    light.under_cabinet:
+        state: on
+        xy_color: [0.163,0.362]
+        brightness: 94
+        transition: 2
+        
+- name: Kitchen Underwater 2
+  entities:
+    light.under_cabinet__passthrough:
+        state: on
+        xy_color: [0.1637,0.1933]
+        brightness: 103
+        transition: 2
+    light.under_cabinet__fridge:
+        state: on
+        xy_color: [0.163,0.362]
+        brightness: 97
+        transition: 2
+    light.under_cabinet:
+        state: on
+        xy_color: [0.1558,0.1557]
+        brightness: 99
+        transition: 2
+
+- name: Kitchen Underwater 3
+  entities:
+    light.under_cabinet__passthrough:
+        state: on
+        xy_color: [0.163,0.362]
+        brightness: 103
+        transition: 2
+    light.under_cabinet__fridge:
+        state: on
+        xy_color: [0.1558,0.1557]
+        brightness: 95
+        transition: 2
+    light.under_cabinet:
+        state: on
+        xy_color: [0.2207,0.3343]
+        brightness: 104
+        transition: 2
+        
+- name: Kitchen Underwater 4
+  entities:
+    light.under_cabinet__passthrough:
+        state: on
+        xy_color: [0.1558,0.1557]
+        brightness: 96
+        transition: 2
+    light.under_cabinet__fridge:
+        state: on
+        xy_color: [0.2207,0.3343]
+        brightness: 104
+        transition: 2
+    light.under_cabinet:
+        state: on
+        xy_color: [0.1904,0.5774]
+        brightness: 100
+        transition: 2
+
+- name: Kitchen Underwater 5
+  entities:
+    light.under_cabinet__passthrough:
+        state: on
+        xy_color: [0.2207,0.3343]
+        brightness: 101
+        transition: 2
+    light.under_cabinet__fridge:
+        state: on
+        xy_color: [0.1904,0.5774]
+        brightness: 98
+        transition: 2
+    light.under_cabinet:
+        state: on
+        xy_color: [0.1909,0.0874]
+        brightness: 103
+        transition: 2
+        
+- name: Kitchen Underwater 6
+  entities:
+    light.under_cabinet__passthrough:
+        state: on
+        xy_color: [0.1904,0.5774]
+        brightness: 104
+        transition: 2
+    light.under_cabinet__fridge:
+        state: on
+        xy_color: [0.1909,0.0874]
+        brightness: 96
+        transition: 2
+    light.under_cabinet:
+        state: on
+        xy_color: [0.1637,0.1933]
+        brightness: 100
+        transition: 2
+        
+- name: Flash Living Rm
+  entities:
+    light.living_room_tall_lamp:
+      state: on
+      flash: short
+    light.living_room_short_lamp:
+      state: on
+      flash: short
+    light.office:
+      state: on
+      flash: short

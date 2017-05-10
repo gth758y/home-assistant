@@ -5,6 +5,7 @@ tyler_status:
       - running
       - sleeping
       - standby
+      - alarming
     initial: standby
     icon: mdi:human-male
 
@@ -15,6 +16,7 @@ amy_status:
       - running
       - sleeping
       - standby
+      - alarming
     initial: standby
     icon: mdi:human-female
       
@@ -51,3 +53,10 @@ bug_zapper_state:
       - bug_off
     initial: bug_off
     icon: mdi:bug
+    
+darkness_state:
+    name: Darkness State
+    options:
+      - its_dark
+      - its_daytime
+    initial: its_daytime

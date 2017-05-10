@@ -2,3 +2,23 @@
 - platform: samsungtv
   host: 10.99.1.13
   name: Living Room TV
+  
+- platform: russound_rnet
+  host: 10.99.1.87
+  port: 6271
+  name: Russound
+  zones:
+    1:
+      name: Master Bedroom
+    2:
+      name: Master Bathroom
+    3:
+      name: Porch
+    4:
+      name: Dining Room
+    5:
+      name: Office
+    6:
+      name: Garage
+  sources:
+    - name: Denon

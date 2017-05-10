@@ -12,3 +12,9 @@ tyler_amyphone:
   picture: /local/amy.jpeg
   track: yes
   hide_if_away: no
+  
+jennifer:
+  name: jennifer
+  mac:  D0:25:98:54:41:D2
+  track: yes
+  hide_if_away: yes
