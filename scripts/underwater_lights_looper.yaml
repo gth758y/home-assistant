@@ -1,0 +1,5 @@
+# make the lights go through cycles of blue/green/water
+sequence:
+    - service: script.turn_on
+      data:
+          entity_id: script.underwater_lights

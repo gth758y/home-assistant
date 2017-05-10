@@ -1,0 +1,42 @@
+# make the lights go through cycles of blue/green/water
+sequence:
+
+    - service: scene.turn_on
+      entity_id: scene.kitchen_Underwater_1
+      
+    - delay:
+          seconds: 1
+
+    - service: scene.turn_on
+      entity_id: scene.kitchen_Underwater_2
+      
+    - delay:
+          seconds: 1
+          
+    - service: scene.turn_on
+      entity_id: scene.kitchen_Underwater_3
+      
+    - delay:
+          seconds: 1
+          
+    - service: scene.turn_on
+      entity_id: scene.kitchen_Underwater_4
+      
+    - delay:
+          seconds: 1
+
+    - service: scene.turn_on
+      entity_id: scene.kitchen_Underwater_5
+      
+    - delay:
+          seconds: 1
+          
+    - service: scene.turn_on
+      entity_id: scene.kitchen_Underwater_6
+    
+    - delay:
+          seconds: 1
+
+    - service: script.turn_on
+      data:
+          entity_id: script.underwater_lights_looper

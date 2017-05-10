@@ -1,0 +1,29 @@
+# Flash the living room lights
+alias: 'Flash Living Rm Lights'
+sequence:
+  - service: scene.turn_on
+    data:
+      entity_id: scene.flash_living_rm
+
+  - service: scene.turn_on
+    data:
+      entity_id: scene.flash_living_rm
+
+  - service: scene.turn_on
+    data:
+      entity_id: scene.flash_living_rm
+
+  - delay:
+      seconds: 2
+      
+  - service: scene.turn_on
+    data:
+      entity_id: scene.flash_living_rm      
+
+  - service: scene.turn_on
+    data:
+      entity_id: scene.flash_living_rm
+
+  - service: scene.turn_on
+    data:
+      entity_id: scene.flash_living_rm
