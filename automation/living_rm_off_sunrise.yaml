@@ -1,0 +1,10 @@
+alias: Turn off the living room
+trigger: 
+    platform: sun
+    event: sunrise
+    offset: "00:20:00"
+action:
+  - service: scene.turn_on
+    entity_id: scene.living_room_off
+  - service: scene.turn_on
+    entity_id: scene.master_bath_off

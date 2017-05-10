@@ -1,0 +1,15 @@
+# Turns the bathroom light off after 25minutes of turning on during the day
+alias: quit leaving the bathroom light on
+trigger:
+    platform: state
+    entity_id: light.master_bathroom
+    state: 'on'
+    for:
+        minutes: 25
+condition:
+    condition: sun
+    after: sunrise
+    before: sunset
+action:
+    service: scene.turn_on
+    entity_id: scene.master_bath_off

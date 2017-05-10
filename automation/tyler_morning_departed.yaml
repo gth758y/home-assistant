@@ -1,0 +1,25 @@
+# new 20 oct 2016 - uses tasker to trigger the morning wakeup routine
+alias: tyler departed
+trigger:
+    platform: state
+    entity_id: device_tracker.tyler_tyler
+    from: 'home'
+    to: 'not_home'
+    for:
+        minutes: 5
+condition:
+  - condition: sun
+    before: sunrise
+  - condition: or
+    conditions:
+      - condition: state
+        entity_id: group.all_devices
+        state: not_home
+      - condition: state
+        entity_id: input_select.amy_status
+        state: 'sleeping'
+action:
+  - service: scene.turn_on
+    entity_id: scene.living_room_off
+  - service: scene.turn_on
+    entity_id: scene.master_bath_dim_red

@@ -8,9 +8,14 @@ trigger:
     for:
         minutes: 10
 condition:
-    condition: sun
-    before: sunset
-    before_offset: "-1:00:00"
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: 'input_select.darkness_state'
+        state: 'its_daytime'
+      - condition: state
+        entity_id: 'input_select.house_status'
+        state: 'awake'
 action:
     service: scene.turn_on
     entity_id: scene.exterior_lights_off

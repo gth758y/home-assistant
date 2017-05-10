@@ -1,0 +1,25 @@
+# It's dark and it's daytime.
+
+alias: It's Daytime and It Was Dark, but now It's Not -- Lights Off
+trigger: 
+    platform: state
+    entity_id: binary_sensor.darkness_threshold_for_lights_off
+    from: 'off'
+    to: 'on'
+    for:
+      minutes: 5
+condition:
+  - condition: state
+    entity_id: 'input_select.darkness_state'
+    state: 'its_daytime'
+action:
+  - service: scene.turn_on
+    entity_id: scene.exterior_lights_off
+  - service: scene.turn_on
+    entity_id: scene.guest_bedroom_off
+  - service: scene.turn_on
+    entity_id: scene.kitchen_off
+  - service: scene.turn_on
+    entity_id: scene.living_room_off
+  - service: scene.turn_on
+    entity_id: scene.master_bedroom_off

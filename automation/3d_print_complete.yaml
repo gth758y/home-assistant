@@ -1,0 +1,14 @@
+# It's dark and it's daytime.
+
+alias: 3D Printer is Done
+trigger: 
+    platform: state
+    entity_id: sensor.octoprint_current_state
+    from: 'Printing'
+    to: 'Operational'
+condition:
+  - condition: state
+    entity_id: 'input_select.house_status'
+    state: 'awake'
+action:
+  - service: script.flash_living_rm

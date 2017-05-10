@@ -1,0 +1,29 @@
+# It's dark and it's daytime.
+
+alias: It's Daytime But It's Dark - Interior Lights On
+trigger: 
+    platform: state
+    entity_id: binary_sensor.darkness_threshold_for_lights_on
+    from: 'off'
+    to: 'on'
+    for:
+      minutes: 5
+condition:
+  - condition: state
+    entity_id: group.all_devices
+    state: home
+  - condition: state
+    entity_id: 'input_select.darkness_state'
+    state: 'its_daytime'
+  - condition: state
+    entity_id: 'input_select.house_status'
+    state: 'awake'
+action:
+  - service: scene.turn_on
+    entity_id: scene.living_room_normal
+  - service: scene.turn_on
+    entity_id: scene.master_bedroom_on
+  - service: scene.turn_on
+    entity_id: scene.guest_bedroom_on
+  - service: scene.turn_on
+    entity_id: scene.kitchen_on

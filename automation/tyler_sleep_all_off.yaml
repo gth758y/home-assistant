@@ -5,14 +5,19 @@ trigger:
     platform: state
     entity_id: input_select.tyler_status
     to: 'sleeping'    
-condition: 
-  condition: or
+condition:
+  condition: and
   conditions:
     - condition: state
-      entity_id: input_select.amy_status
-      state: 'sleeping'
-    - condition: state
-      entity_id: device_tracker.tyler_amyphone
-      state: not_home
+      entity_id: 'device_tracker.tyler_tyler'
+      state: 'home' 
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: input_select.amy_status
+          state: 'sleeping'
+        - condition: state
+          entity_id: device_tracker.tyler_amyphone
+          state: 'not_home'
 action:
     service: script.nighttime_shutdown

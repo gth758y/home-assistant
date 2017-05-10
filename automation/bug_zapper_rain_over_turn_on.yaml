@@ -13,4 +13,4 @@ condition:
     state: 'bug_on'
 action:
   - service: switch.turn_on
-    entity_id: switch.ge_unknown_type4f50_id3031_switch_2
+    entity_id: switch.ge_unknown_type4f50_id3031_switch_2_0

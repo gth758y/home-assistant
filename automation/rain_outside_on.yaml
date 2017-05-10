@@ -7,9 +7,12 @@ trigger:
     state: 'rain'
     for:
         minutes: 10
-condition:
-    condition: sun
-    after: sunrise    
+condition: 
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: 'input_select.darkness_state'
+      state: 'its_daytime'
 action:
     service: scene.turn_on
     entity_id: scene.exterior_lights_on
