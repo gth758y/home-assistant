@@ -7,7 +7,7 @@ trigger:
     from: 'off'
     to: 'on'
     for:
-      minutes: 5
+      minutes: 60
 condition:
   - condition: state
     entity_id: 'input_select.darkness_state'

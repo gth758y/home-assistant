@@ -7,7 +7,7 @@ trigger:
     offset: "01:00:00"
 action:
   - service: switch.turn_off
-    entity_id: switch.ge_unknown_type4f50_id3031_switch_2_0
+    entity_id: switch.ge_unknown_type4f50_id3031_switch
   - service: input_select.select_option
     data:
       entity_id: input_select.bug_zapper_state

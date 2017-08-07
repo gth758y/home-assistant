@@ -7,4 +7,4 @@ trigger:
     state: 'rain'
 action:
   - service: switch.turn_off
-    entity_id: switch.ge_unknown_type4f50_id3031_switch_2_0
+    entity_id: switch.ge_unknown_type4f50_id3031_switch
