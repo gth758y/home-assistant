@@ -98,8 +98,8 @@
     name: Exterior
     entities:
       - switch.back_porch
-      - switch.ge_12722_onoff_relay_switch_switch_4_0
-      - switch.ge_unknown_type4f50_id3031_switch_2_0
+      - switch.ge_12722_onoff_relay_switch_switch_2
+      - switch.ge_unknown_type4f50_id3031_switch
   living_room_lights:    
     name: Living Room
     entities:
@@ -115,7 +115,7 @@
   kitchen_lights:    
     name: Kitchen
     entities:
-      - switch.ge_12722_onoff_relay_switch_switch_3_0
+      - switch.ge_12722_onoff_relay_switch_switch
       - light.under_cabinet
       - light.under_cabinet__fridge
       - light.under_cabinet__passthrough
@@ -268,14 +268,14 @@
     name: Lights
     entities:
       - switch.back_porch
-      - switch.ge_12722_onoff_relay_switch_switch_4_0
-      - switch.ge_unknown_type4f50_id3031_switch_2_0
+      - switch.ge_12722_onoff_relay_switch_switch_2
+      - switch.ge_unknown_type4f50_id3031_switch
       - light.living_room_short_lamp
       - light.living_room_tall_lamp
       - light.bedroom__amy
       - light.bedroom__tyler
       - light.master_bathroom
-      - switch.ge_12722_onoff_relay_switch_switch_3_0
+      - switch.ge_12722_onoff_relay_switch_switch
       - light.under_cabinet
       - light.under_cabinet__fridge
       - light.under_cabinet__passthrough

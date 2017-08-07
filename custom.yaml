@@ -1,12 +1,12 @@
 
-switch.ge_unknown_type4f50_id3031_switch_2_0:
+switch.ge_unknown_type4f50_id3031_switch:
   friendly_name: Redneck Bug Zapper
   icon: mdi:bug
   
-switch.ge_12722_onoff_relay_switch_switch_3_0:
+switch.ge_12722_onoff_relay_switch_switch:
   friendly_name: Kitchen Overhead
   icon: mdi:food
   
-switch.ge_12722_onoff_relay_switch_switch_4_0:
+switch.ge_12722_onoff_relay_switch_switch_2:
   friendly_name: Front Door
   icon: mdi:home

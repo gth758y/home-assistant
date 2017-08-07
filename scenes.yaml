@@ -68,12 +68,12 @@
 
 - name: Exterior Lights On
   entities:
-    switch.ge_12722_onoff_relay_switch_switch_4_0: on
+    switch.ge_12722_onoff_relay_switch_switch_2: on
     switch.back_porch: on
     
 - name: Exterior Lights Off
   entities:
-    switch.ge_12722_onoff_relay_switch_switch_4_0: off
+    switch.ge_12722_onoff_relay_switch_switch_2: off
     switch.back_porch: off
     
 - name: Kitchen Off
