@@ -14,6 +14,7 @@ discovery:
 logbook:
 history:
 sun:
+map:
 sensor: !include sensors.yaml
 automation: !include_dir_list automation
 script: !include_dir_named scripts
@@ -43,7 +44,8 @@ zwave:
   config_path: /usr/local/lib/python3.4/dist-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
 
 recorder:
-  purge_days: 30
+  purge_interval: 2
+  purge_keep_days: 30
   db_url: !secret mariaDB_url
   
 octoprint:
@@ -60,3 +62,17 @@ envisalink: !include envisalink.yaml
 group: !include group.yaml
 proximity: !include proximity.yaml
 binary_sensor: !include binary_sensor.yaml
+panel_custom:
+  - name: floorplan
+    sidebar_title: Floorplan
+    sidebar_icon: mdi:home
+    url_path: floorplan
+    config: !include floorplan.yaml
+# google_assistant:
+  # project_id: someproject-2d0b8
+  # client_id: !secret goog_home_client_id
+  # access_token: !secret goog_home_access_token
+  # exposed_domains:
+    # - switch
+    # - light
+    # - group

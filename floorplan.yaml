@@ -1,0 +1,69 @@
+      name: Demo Floorplan
+      image: /local/custom_ui/floorplan/floorplan.svg
+      stylesheet: /local/custom_ui/floorplan/floorplan.css
+      warnings:
+      pan_zoom:
+      groups:
+      - name: Lights
+        entities:
+           - light.bedroom__amy
+           - light.bedroom__tyler
+           - light.guest_bedroom__closet
+           - light.guest_bedroom__window
+           - light.living_room_short_lamp
+           - light.living_room_tall_lamp
+           - light.master_bathroom
+           - light.office
+           - light.under_cabinet
+           - light.under_cabinet__fridge
+           - light.under_cabinet__passthrough
+        states:
+           - state: 'on'
+             class: 'light-on'
+           - state: 'off'
+             class: 'light-off'
+      - name: Switches
+        entities:
+           - switch.ge_12722_onoff_relay_switch_switch
+           - switch.ge_12722_onoff_relay_switch_switch_2
+           - switch.back_porch
+           - switch.ge_unknown_type4f50_id3031_switch
+        states:
+          - state: 'on'
+            class: 'doorbell-on'
+          - state: 'off'
+            class: 'doorbell-off'
+        action:
+          domain: switch
+          service: toggle
+      - name: Binary Sensors
+        entities:
+          - binary_sensor.front_doors
+          - binary_sensor.back_door
+        states:
+          - state: 'off'
+            class: 'info-background'
+          - state: 'on'
+            class: 'warning-background'
+        state_transitions:
+          - name: On to off
+            from_state: 'on'
+            to_state: 'off'
+            duration: 10
+      - name: Media Players
+        entities:
+          - media_player.dining_room
+          - media_player.garage
+          - media_player.master_bathroom
+          - media_player.master_bedroom
+          - media_player.office
+          - media_player.porch
+        states:
+          - state: 'off'
+            class: 'squeezebox-off'
+          - state: 'idle'
+            class: 'squeezebox-off'
+          - state: 'paused'
+            class: 'squeezebox-off'
+          - state: 'on'
+            class: 'squeezebox-on'

@@ -41,3 +41,9 @@
   longitude: !secret ccad_long
   radius: 750 
   icon: mdi:worker
+  
+- name: HEB
+  latitude: !secret heb_lat
+  longitude: !secret heb_long
+  radius: 150
+  icon: mdi:food-fork-drink

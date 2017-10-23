@@ -237,3 +237,34 @@
     light.office:
       state: on
       flash: short
+      
+- name: House Blue
+  entities:
+    light.under_cabinet:
+        state: on
+        xy_color: [0.1909,0.0874]
+        brightness: 44
+    light.under_cabinet__fridge:
+        state: on
+        xy_color: [0.1909,0.0874]
+        brightness: 44
+    light.under_cabinet__passthrough:
+        state: on
+        xy_color: [0.1909,0.0874]
+        brightness: 44
+    light.living_room_short_lamp:
+        state: on
+        xy_color: [0.191,0.0867]
+        brightness: 48
+    light.living_room_tall_lamp:
+        state: on
+        xy_color: [0.191,0.0867]
+        brightness: 48
+    light.bedroom__tyler:
+        state: on
+        xy_color: [0.191,0.0867]
+        brightness: 48
+    light.bedroom__amy:
+        state: on
+        xy_color: [0.191,0.0867]
+        brightness: 48
