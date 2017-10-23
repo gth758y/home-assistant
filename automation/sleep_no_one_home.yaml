@@ -3,7 +3,7 @@
 alias: No one home lights off
 trigger:
     platform: time
-    after: '22:45:00'
+    at: '22:45:00'
 condition:
     condition: state
     entity_id: group.all_devices

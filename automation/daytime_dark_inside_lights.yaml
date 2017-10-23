@@ -27,3 +27,5 @@ action:
     entity_id: scene.guest_bedroom_on
   - service: scene.turn_on
     entity_id: scene.kitchen_on
+  - service: scene.turn_on
+    entity_id: scene.master_bath_bright_red

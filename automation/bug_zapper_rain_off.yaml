@@ -4,7 +4,7 @@ alias: It's Raining - Turn Bug Zapper Off
 trigger: 
     platform: state
     entity_id: sensor.dark_sky_precip
-    state: 'rain'
+    to: 'rain'
 action:
   - service: switch.turn_off
     entity_id: switch.ge_unknown_type4f50_id3031_switch

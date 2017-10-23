@@ -23,3 +23,5 @@ action:
     entity_id: scene.living_room_off
   - service: scene.turn_on
     entity_id: scene.master_bedroom_off
+  - service: scene.turn_on
+    entity_id: scene.master_bath_off

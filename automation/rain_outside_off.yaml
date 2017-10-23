@@ -4,7 +4,7 @@ alias: rain_stopped_sun_still_up
 trigger:
     platform: state
     entity_id: sensor.dark_sky_precip_intensity
-    state: '0'
+    to: '0'
     for:
         minutes: 10
 condition:

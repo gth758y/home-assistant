@@ -4,7 +4,7 @@ alias: rain_started
 trigger:
     platform: state
     entity_id: sensor.dark_sky_precip
-    state: 'rain'
+    to: 'rain'
     for:
         minutes: 10
 condition: 

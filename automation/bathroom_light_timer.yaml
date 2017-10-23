@@ -3,13 +3,13 @@ alias: quit leaving the bathroom light on
 trigger:
     platform: state
     entity_id: light.master_bathroom
-    state: 'on'
+    to: 'on'
     for:
         minutes: 25
 condition:
-    condition: sun
-    after: sunrise
-    before: sunset
+    condition: state
+    entity_id: 'input_select.darkness_state'
+    state: 'its_daytime'
 action:
     service: scene.turn_on
     entity_id: scene.master_bath_off
